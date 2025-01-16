@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://deblmjgyxsegn"]
+
+[ext_resource type="Texture2D" uid="uid://cba33ivql8bi6" path="res://Pictures/Platform/Platform5.png" id="1_3m0lc"]
+
+[node name="Map5" type="StaticBody2D"]
+visible = false
+position = Vector2(378, 227)
+collision_layer = 64
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("1_3m0lc")
+
+[node name="MainCollision" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-408, 203, 362, 203, 362, 253, -408, 253)
+
+[node name="Platform1" type="CollisionPolygon2D" parent="."]
+position = Vector2(202, 168)
+polygon = PackedVector2Array(-650, -125, -330, -125, -330, -75, -650, -75)
+
+[node name="Platform2" type="CollisionPolygon2D" parent="."]
+position = Vector2(717, 163)
+polygon = PackedVector2Array(-645, -125, -325, -125, -325, -75, -645, -75)

@@ -1,0 +1,665 @@
+[gd_scene load_steps=63 format=3 uid="uid://31o6jcmhsha1"]
+
+[ext_resource type="Script" path="res://UI/control.gd" id="1_rw6bg"]
+[ext_resource type="Texture2D" uid="uid://dqcw1jq13yxst" path="res://Pictures/BackGround/Menu1.png" id="2_gdand"]
+[ext_resource type="Texture2D" uid="uid://b6ntwq1b3rqk" path="res://Pictures/BackGround/Menu2.png" id="3_2ii85"]
+[ext_resource type="Texture2D" uid="uid://437jxdl3hac8" path="res://Pictures/Icons.png" id="3_uk7t4"]
+[ext_resource type="Texture2D" uid="uid://dbad16wdqqwmf" path="res://Pictures/Title.png" id="4_onfh4"]
+[ext_resource type="Texture2D" uid="uid://b5g67abmomxq3" path="res://Pictures/Menubuttons.png" id="7_tlo7q"]
+[ext_resource type="Texture2D" uid="uid://cg3kslg176ayi" path="res://Pictures/LevelSelect.png" id="7_ypni8"]
+[ext_resource type="Texture2D" uid="uid://cap271vkr2s00" path="res://Pictures/CharacterSelect.png" id="10_gobkn"]
+[ext_resource type="Texture2D" uid="uid://3jdpht57ebdi" path="res://Pictures/pixilart-icons.png" id="14_8nt5u"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ff7ug"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_gdand")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_2ii85")
+}],
+"loop": true,
+"name": &"BackGround",
+"speed": 10.0
+}]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ohfva"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j4lmb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0347w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qwvmn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r4sxl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_q88jp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yutpc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ciuly"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bris8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i36cf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hj28i"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vhf2n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8bwgf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l30lp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r6qud"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u4a8o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lcqgj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5u1g3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7pt3u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8x3wn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tqpxm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8737d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m1hrs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0yobk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dhx4k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mav0g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4yb0g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5hy7j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h3lw4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y8sim"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fux5w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_efoi4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_40gwx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3logp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y3j10"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2uwad"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0hqc1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h5bwp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4i6yf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bsjv8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_77f0t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rhi3w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c1l0h"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r71jq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2jdvw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wbkle"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0nr4y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_umva0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_quawe"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_glbaa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_45bg2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yotdj"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rw6bg")
+
+[node name="BackGround" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(375, 225)
+scale = Vector2(10, 10)
+sprite_frames = SubResource("SpriteFrames_ff7ug")
+animation = &"BackGround"
+frame_progress = 0.952603
+
+[node name="Title" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(375, 125)
+scale = Vector2(0.37, 0.37)
+texture = ExtResource("4_onfh4")
+
+[node name="MenuButtons" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(375, 225)
+scale = Vector2(0.741, 0.741)
+texture = ExtResource("7_tlo7q")
+
+[node name="CharacterSelect" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(375, 225)
+scale = Vector2(0.37, 0.37)
+texture = ExtResource("10_gobkn")
+
+[node name="LevelSelect" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(370, 225)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("7_ypni8")
+
+[node name="GridContainer1" type="GridContainer" parent="."]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = 210.0
+offset_top = 200.0
+offset_right = 250.0
+offset_bottom = 300.0
+theme_override_constants/v_separation = 100
+
+[node name="Panel1" type="Panel" parent="GridContainer1"]
+layout_mode = 2
+
+[node name="1 VS 1" type="Button" parent="GridContainer1/Panel1"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(40, 10)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ohfva")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_j4lmb")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_0347w")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_qwvmn")
+
+[node name="Panel2" type="Panel" parent="GridContainer1"]
+layout_mode = 2
+
+[node name="Trainin\'" type="Button" parent="GridContainer1/Panel2"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(40, 10)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_r4sxl")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_q88jp")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_yutpc")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ciuly")
+
+[node name="P1Select" type="GridContainer" parent="."]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = 10.0
+offset_top = 220.0
+offset_right = 180.0
+offset_bottom = 330.0
+theme_override_constants/h_separation = 170
+theme_override_constants/v_separation = 110
+columns = 2
+
+[node name="Panel1" type="Panel" parent="P1Select"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="P1Select/Panel1"]
+position = Vector2(50, 50)
+scale = Vector2(0.26, 0.26)
+texture = ExtResource("3_uk7t4")
+hframes = 4
+vframes = 5
+
+[node name="Panel2" type="Panel" parent="P1Select"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="P1Select/Panel2"]
+position = Vector2(50, 50)
+scale = Vector2(0.26, 0.26)
+texture = ExtResource("3_uk7t4")
+hframes = 4
+vframes = 5
+
+[node name="Panel3" type="Panel" parent="P1Select"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="P1Select/Panel3"]
+position = Vector2(50, 50)
+scale = Vector2(0.26, 0.26)
+texture = ExtResource("3_uk7t4")
+hframes = 4
+vframes = 5
+
+[node name="Panel4" type="Panel" parent="P1Select"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="P1Select/Panel4"]
+position = Vector2(50, 50)
+scale = Vector2(0.26, 0.26)
+texture = ExtResource("3_uk7t4")
+hframes = 4
+vframes = 5
+
+[node name="P2Select" type="GridContainer" parent="."]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = 390.0
+offset_top = 220.0
+offset_right = 560.0
+offset_bottom = 330.0
+theme_override_constants/h_separation = 170
+theme_override_constants/v_separation = 110
+columns = 2
+
+[node name="Panel1" type="Panel" parent="P2Select"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="P2Select/Panel1"]
+position = Vector2(50, 50)
+scale = Vector2(0.26, 0.26)
+texture = ExtResource("3_uk7t4")
+hframes = 4
+vframes = 5
+
+[node name="Panel2" type="Panel" parent="P2Select"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="P2Select/Panel2"]
+position = Vector2(50, 50)
+scale = Vector2(0.26, 0.26)
+texture = ExtResource("3_uk7t4")
+hframes = 4
+vframes = 5
+
+[node name="Panel3" type="Panel" parent="P2Select"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="P2Select/Panel3"]
+position = Vector2(50, 50)
+scale = Vector2(0.26, 0.26)
+texture = ExtResource("3_uk7t4")
+hframes = 4
+vframes = 5
+
+[node name="Panel4" type="Panel" parent="P2Select"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="P2Select/Panel4"]
+position = Vector2(50, 50)
+scale = Vector2(0.26, 0.26)
+texture = ExtResource("3_uk7t4")
+hframes = 4
+vframes = 5
+
+[node name="PlayerIcon" type="GridContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 160.0
+offset_top = 20.0
+offset_right = 200.0
+offset_bottom = 60.0
+theme_override_constants/h_separation = 375
+columns = 2
+
+[node name="Panel1" type="Panel" parent="PlayerIcon"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="PlayerIcon/Panel1"]
+position = Vector2(60, 65)
+scale = Vector2(10, 10)
+texture = ExtResource("14_8nt5u")
+hframes = 2
+
+[node name="Panel2" type="Panel" parent="PlayerIcon"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="PlayerIcon/Panel2"]
+position = Vector2(65, 65)
+scale = Vector2(10, 10)
+texture = ExtResource("14_8nt5u")
+hframes = 2
+
+[node name="PlayerIconButton" type="GridContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 300.0
+offset_top = 50.0
+offset_right = 340.0
+offset_bottom = 90.0
+theme_override_constants/h_separation = 380
+columns = 2
+
+[node name="Panel" type="Panel" parent="PlayerIconButton"]
+layout_mode = 2
+
+[node name="P1Character" type="Button" parent="PlayerIconButton/Panel"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(6, 10)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_bris8")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_i36cf")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_hj28i")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_vhf2n")
+
+[node name="Panel2" type="Panel" parent="PlayerIconButton"]
+layout_mode = 2
+
+[node name="P2Character" type="Button" parent="PlayerIconButton/Panel2"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(6, 10)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8bwgf")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_l30lp")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_r6qud")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_u4a8o")
+
+[node name="GoButton" type="GridContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 10.0
+offset_top = 110.0
+offset_right = 50.0
+offset_bottom = 150.0
+theme_override_constants/h_separation = 380
+columns = 2
+
+[node name="Panel1" type="Panel" parent="GoButton"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="GoButton/Panel1"]
+visible = false
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 50.0
+offset_bottom = 50.0
+scale = Vector2(3, 2)
+
+[node name="Button" type="Button" parent="GoButton/Panel1"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(17.6, 12.5)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_lcqgj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5u1g3")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_7pt3u")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_8x3wn")
+
+[node name="Panel2" type="Panel" parent="GoButton"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="GoButton/Panel2"]
+visible = false
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 50.0
+offset_bottom = 50.0
+scale = Vector2(3, 2)
+
+[node name="Button" type="Button" parent="GoButton/Panel2"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(17.6, 12.5)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tqpxm")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8737d")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_m1hrs")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0yobk")
+
+[node name="P1SelectButtons" type="GridContainer" parent="."]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = 120.0
+offset_top = 230.0
+offset_right = 290.0
+offset_bottom = 340.0
+theme_override_constants/h_separation = 170
+theme_override_constants/v_separation = 110
+columns = 2
+
+[node name="Panel1" type="Panel" parent="P1SelectButtons"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="P1SelectButtons/Panel1"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(6, 10)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dhx4k")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mav0g")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4yb0g")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5hy7j")
+
+[node name="Panel2" type="Panel" parent="P1SelectButtons"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="P1SelectButtons/Panel2"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(6, 10)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dhx4k")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mav0g")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4yb0g")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5hy7j")
+
+[node name="Panel3" type="Panel" parent="P1SelectButtons"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="P1SelectButtons/Panel3"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(6, 10)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dhx4k")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mav0g")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4yb0g")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5hy7j")
+
+[node name="Panel4" type="Panel" parent="P1SelectButtons"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="P1SelectButtons/Panel4"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(6, 10)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dhx4k")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mav0g")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4yb0g")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5hy7j")
+
+[node name="P2SelectButtons" type="GridContainer" parent="."]
+visible = false
+top_level = true
+layout_mode = 0
+offset_left = 500.0
+offset_top = 230.0
+offset_right = 670.0
+offset_bottom = 340.0
+theme_override_constants/h_separation = 170
+theme_override_constants/v_separation = 110
+columns = 2
+
+[node name="Panel1" type="Panel" parent="P2SelectButtons"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="P2SelectButtons/Panel1"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(6, 10)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dhx4k")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mav0g")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4yb0g")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5hy7j")
+
+[node name="Panel2" type="Panel" parent="P2SelectButtons"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="P2SelectButtons/Panel2"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(6, 10)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dhx4k")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mav0g")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4yb0g")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5hy7j")
+
+[node name="Panel3" type="Panel" parent="P2SelectButtons"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="P2SelectButtons/Panel3"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(6, 10)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dhx4k")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mav0g")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4yb0g")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5hy7j")
+
+[node name="Panel4" type="Panel" parent="P2SelectButtons"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="P2SelectButtons/Panel4"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(6, 10)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dhx4k")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mav0g")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4yb0g")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5hy7j")
+
+[node name="LevelSelectButtons" type="GridContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 44.0
+offset_top = 22.0
+offset_right = 84.0
+offset_bottom = 62.0
+theme_override_constants/h_separation = 227
+theme_override_constants/v_separation = 208
+columns = 3
+
+[node name="Panel1" type="Panel" parent="LevelSelectButtons"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="LevelSelectButtons/Panel1"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(26, 25)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_h3lw4")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_y8sim")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_fux5w")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_efoi4")
+
+[node name="Panel2" type="Panel" parent="LevelSelectButtons"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="LevelSelectButtons/Panel2"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(26, 25)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_40gwx")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_3logp")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_y3j10")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2uwad")
+
+[node name="Panel3" type="Panel" parent="LevelSelectButtons"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="LevelSelectButtons/Panel3"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(26, 25)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0hqc1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_h5bwp")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_4i6yf")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_bsjv8")
+
+[node name="Panel4" type="Panel" parent="LevelSelectButtons"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="LevelSelectButtons/Panel4"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(26, 25)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_77f0t")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_rhi3w")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_c1l0h")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_r71jq")
+
+[node name="Panel5" type="Panel" parent="LevelSelectButtons"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="LevelSelectButtons/Panel5"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(26, 25)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2jdvw")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_wbkle")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_0nr4y")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_umva0")
+
+[node name="Panel6" type="Panel" parent="LevelSelectButtons"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="LevelSelectButtons/Panel6"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(26, 25)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_quawe")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_glbaa")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_45bg2")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yotdj")
+
+[connection signal="pressed" from="GridContainer1/Panel1/1 VS 1" to="." method="PlayPressed"]
+[connection signal="pressed" from="PlayerIconButton/Panel/P1Character" to="." method="p_1_pressed"]
+[connection signal="pressed" from="PlayerIconButton/Panel2/P2Character" to="." method="p_2_pressed"]
+[connection signal="pressed" from="GoButton/Panel1/Button" to="." method="Go1"]
+[connection signal="pressed" from="GoButton/Panel2/Button" to="." method="Go2"]
+[connection signal="pressed" from="P1SelectButtons/Panel1/Button" to="." method="p_3_pressed"]
+[connection signal="pressed" from="P1SelectButtons/Panel2/Button" to="." method="p_4_pressed"]
+[connection signal="pressed" from="P1SelectButtons/Panel3/Button" to="." method="p_5_pressed"]
+[connection signal="pressed" from="P1SelectButtons/Panel4/Button" to="." method="p_6_pressed"]
+[connection signal="pressed" from="P2SelectButtons/Panel1/Button" to="." method="p_7_pressed"]
+[connection signal="pressed" from="P2SelectButtons/Panel2/Button" to="." method="p_8_pressed"]
+[connection signal="pressed" from="P2SelectButtons/Panel3/Button" to="." method="p_9_pressed"]
+[connection signal="pressed" from="P2SelectButtons/Panel4/Button" to="." method="p_10_pressed"]
+[connection signal="pressed" from="LevelSelectButtons/Panel1/Button" to="." method="level_Select_1_Pressed"]
+[connection signal="pressed" from="LevelSelectButtons/Panel2/Button" to="." method="level_Select_2_Pressed"]
+[connection signal="pressed" from="LevelSelectButtons/Panel3/Button" to="." method="level_Select_3_Pressed"]
+[connection signal="pressed" from="LevelSelectButtons/Panel4/Button" to="." method="level_Select_4_Pressed"]
+[connection signal="pressed" from="LevelSelectButtons/Panel5/Button" to="." method="level_Select_5_Pressed"]
+[connection signal="pressed" from="LevelSelectButtons/Panel6/Button" to="." method="level_Select_6_Pressed"]
