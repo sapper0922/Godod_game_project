@@ -56,22 +56,61 @@ func _process(delta: float) -> void:
 	if(control.Map == 1):
 		map1.visible = true
 		
-		player_1.set_collision_mask_value(3,true)
-		player_2.set_collision_mask_value(3,true)
+		if(player_1.velocity.y < 0):
+			player_1.set_collision_mask_value(3,false)
+			
+		else:
+			player_1.set_collision_mask_value(3,true)
+		
+		if(player_2.velocity.y < 0):
+			player_2.set_collision_mask_value(3,false)
+			
+		else:
+			player_2.set_collision_mask_value(3,true)
+		
 	elif(control.Map == 2):
 		map2.visible = true
 		
-		player_1.set_collision_mask_value(4,true)
-		player_2.set_collision_mask_value(4,true)
+		if(player_1.velocity.y < 0):
+			player_1.set_collision_mask_value(4,false)
+			
+		else:
+			player_1.set_collision_mask_value(4,true)
+		
+		if(player_2.velocity.y < 0):
+			player_2.set_collision_mask_value(4,false)
+			
+		else:
+			player_2.set_collision_mask_value(4,true)
+			
 	elif(control.Map == 3): 
 		map3.visible = true
 		
-		player_1.set_collision_mask_value(5,true)
-		player_2.set_collision_mask_value(5,true)
+		if(player_1.velocity.y < 0):
+			player_1.set_collision_mask_value(5,false)
+			
+		else:
+			player_1.set_collision_mask_value(5,true)
+		
+		if(player_2.velocity.y < 0):
+			player_2.set_collision_mask_value(5,false)
+			
+		else:
+			player_2.set_collision_mask_value(5,true)
+			
 	elif(control.Map == 4):
 		pass
 	elif(control.Map == 5):
 		map5.visible = true
 		
-		player_1.set_collision_mask_value(7,true)
-		player_2.set_collision_mask_value(7,true)
+		if(player_1.velocity.y < 0):
+			player_1.set_collision_mask_value(7,false)
+			
+		else:
+			player_1.set_collision_mask_value(7,true)
+		
+		if(player_2.velocity.y < 0):
+			player_2.set_collision_mask_value(7,false)
+			
+		else:
+			player_2.set_collision_mask_value(7,true)

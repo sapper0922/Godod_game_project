@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://djw2k7jcqpbsd" path="res://Pictures/Platform/Platform2.png" id="1_1a5r1"]
 
 [node name="Map2" type="StaticBody2D"]
+visible = false
 position = Vector2(378, 227)
 collision_layer = 8
 collision_mask = 0

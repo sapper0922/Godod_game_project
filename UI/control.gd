@@ -76,7 +76,6 @@ func _ready():
 	set_process(true)
 
 func _process(delta):
-	print(screen)
 	if(screen != 0):
 		delay = 0
 		ranOnce = false
