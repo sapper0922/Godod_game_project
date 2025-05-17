@@ -20,7 +20,6 @@ offset_bottom = 450.0
 [node name="Map1" parent="." instance=ExtResource("3_ls8rr")]
 
 [node name="Map2" parent="." instance=ExtResource("4_85vmd")]
-visible = false
 
 [node name="Map3" parent="." instance=ExtResource("5_xnc8l")]
 

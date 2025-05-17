@@ -51,7 +51,6 @@ extends Control
 @onready var map_4: StaticBody2D = $"../Map4"
 @onready var map_5: StaticBody2D = $"../Map5"
 
-
 var delay = 0
 var Odelay = 0
 var Rdelay = 0
@@ -74,6 +73,18 @@ var alreadyPressed = false
 
 func _ready():
 	set_process(true)
+	
+	# Player 1
+	icon1.frame = 8
+	icon2.frame = 9
+	icon3.frame = 8
+	icon4.frame = 8
+	
+	# Player 2
+	icon5.frame = 8
+	icon6.frame = 9
+	icon7.frame = 8
+	icon8.frame = 8
 
 func _process(delta):
 	if(screen != 0):

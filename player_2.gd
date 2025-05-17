@@ -14,6 +14,25 @@ const JUMP_VELOCITY = -1000.0
 # Get other player
 @onready var player1: CharacterBody2D = $"../Player1"
 
+@onready var icon5: Sprite2D = $P2Select/Panel1/Sprite2D
+@onready var icon6: Sprite2D = $P2Select/Panel2/Sprite2D
+@onready var icon7: Sprite2D = $P2Select/Panel3/Sprite2D
+@onready var icon8: Sprite2D = $P2Select/Panel4/Sprite2D
+
+var timer = 0
+
+var attack1 = false
+var attack2 = false
+var attack3 = false
+var attack4 = false
+
+var attacked1 = false
+var attacked2 = false
+var attacked3 = false
+var attacked4 = false
+
+var attacking = false
+
 var health = 100
 var points = 0
 
@@ -44,12 +63,25 @@ func _process(delta: float) -> void:
 			player1.points += 1
 
 func _physics_process(delta: float) -> void:
+	var input_axis := Input.get_axis("MoveR2", "MoveL2")
+	attack1 = Input.is_action_just_pressed("P2Attack1")
+	attack2 = Input.is_action_just_pressed("P2Attack2")
+	attack3 = Input.is_action_just_pressed("P2Attack3")
+	attack4 = Input.is_action_just_pressed("P2Attack4")
+	if(attack1 || attack2 || attack3 || attack4):
+		attacking = true
 	handle_gravity(delta)
 	handle_jump()
-	var input_axis := Input.get_axis("MoveR2", "MoveL2")
-	movement(input_axis, delta)
 	
-	update_animation(input_axis)
+	if(attack1):
+		attacked1 = true
+		
+	if(!attacking):
+		movement(input_axis, delta)
+		update_animation(input_axis)
+	elif(attacked1):
+		movement(input_axis, delta)
+		handleAttack1(delta)
 	
 	move_and_slide()
 
@@ -95,11 +127,32 @@ func update_animation(input_axis):
 	if(!is_on_floor()):
 		if(playerIcon2.frame == 0):
 			animated_sprite_2d.play("GJump")
+			if(animated_sprite_2d.flip_h == false):
+				animated_sprite_2d.offset.x = 0
+			if(animated_sprite_2d.flip_h == true):
+				animated_sprite_2d.offset.x = 3
 		elif(playerIcon2.frame == 1):
 			animated_sprite_2d.play("SJump")
+			if(animated_sprite_2d.flip_h == false):
+				animated_sprite_2d.offset.x = 0
+			if(animated_sprite_2d.flip_h == true):
+				animated_sprite_2d.offset.x = 3
 		
 		# Off set bug fix
-		if(animated_sprite_2d.flip_h == false):
+		if(animated_sprite_2d.flip_h == false && is_on_floor()):
 			animated_sprite_2d.offset.x = 3
-		elif(animated_sprite_2d.flip_h == true):
+		elif(animated_sprite_2d.flip_h == true && is_on_floor()):
 			animated_sprite_2d.offset.x = 0
+func handleAttack1(delta):
+	timer += delta
+	if(timer >= 0.18):
+		attacking = false
+		attacked1 = false
+		timer = 0
+		
+	# Plays the animation
+	animated_sprite_2d.play("GSmack")
+	if(animated_sprite_2d.flip_h == false):
+		animated_sprite_2d.offset.x = 0
+	elif(animated_sprite_2d.flip_h == true):
+		animated_sprite_2d.offset.x = 3

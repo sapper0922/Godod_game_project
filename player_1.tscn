@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://det37wbxbg7mw"]
+[gd_scene load_steps=18 format=3 uid="uid://det37wbxbg7mw"]
 
 [ext_resource type="Script" path="res://player_1.gd" id="1_uisvf"]
 [ext_resource type="Texture2D" uid="uid://bx1qnhjrr7yhk" path="res://Pictures/Player/Idle3.png" id="2_isd4q"]
@@ -9,13 +9,15 @@
 [ext_resource type="Texture2D" uid="uid://b6eyh4xrx6u1t" path="res://Pictures/Player/Running3.png" id="5_y783f"]
 [ext_resource type="Texture2D" uid="uid://in2b5snm7g6m" path="res://Pictures/Player/SkeleIdle1.png" id="8_1f6fv"]
 [ext_resource type="Texture2D" uid="uid://ct703uxiyv2ec" path="res://Pictures/Player/SkeleRunning3.png" id="8_lls21"]
+[ext_resource type="Texture2D" uid="uid://drd6ljhtse000" path="res://Pictures/Player/PlayerAttack/GooberSmack1.png" id="8_wi6lm"]
 [ext_resource type="Texture2D" uid="uid://cncna7olquull" path="res://Pictures/Player/SkeleIdle3.png" id="8_x44go"]
+[ext_resource type="Texture2D" uid="uid://citladr4gcgq8" path="res://Pictures/Player/PlayerAttack/GooberSmack2.png" id="9_3gwct"]
 [ext_resource type="Texture2D" uid="uid://c4svya8sv2ukh" path="res://Pictures/Player/SkeleRunning1.png" id="9_mow2h"]
 [ext_resource type="Texture2D" uid="uid://3cslusy7381f" path="res://Pictures/Player/SkeleIdle2.png" id="9_tkpq7"]
 [ext_resource type="Texture2D" uid="uid://d0rthdwmi5ibf" path="res://Pictures/Player/SkeleRunning2.png" id="10_wpam1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ofq5"]
-size = Vector2(20, 30)
+size = Vector2(19, 30)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_7iqn5"]
 animations = [{
@@ -62,6 +64,17 @@ animations = [{
 }],
 "loop": true,
 "name": &"GRun",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_wi6lm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_3gwct")
+}],
+"loop": false,
+"name": &"GSmack",
 "speed": 10.0
 }, {
 "frames": [{
@@ -118,10 +131,11 @@ collision_mask = 0
 script = ExtResource("1_uisvf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -1)
+position = Vector2(0.5, -1)
 shape = SubResource("RectangleShape2D_5ofq5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-1.33334, -2)
+position = Vector2(-1.00001, -2)
 sprite_frames = SubResource("SpriteFrames_7iqn5")
-animation = &"GJump"
+animation = &"GSmack"
+offset = Vector2(3, 0)
