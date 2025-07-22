@@ -1,0 +1,15 @@
+Gooblem is a game Project made be Me and another Friend
+
+My friend came up with the Idea of the game. He is responsible for the gameplay and
+what changes he wants made.
+He is also responsible for the artstyle. Everything you see while playing is made from
+him including the Player, Map, and the User Interface.
+
+I am responsible for coding everything. I made the code for the Player
+and their attacks, World, and the User Interface. I am responsible for making sure
+what he makes with art works in the game.
+
+You can check out my friends pixel art here
+https://www.pixilart.com/baldrickthered
+
+There you will see all of his pixil art projects.
