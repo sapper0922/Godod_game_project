@@ -27,6 +27,8 @@ func _ready() -> void:
 	for i in range(8):
 		player_1.set_collision_mask_value(i,false)
 		player_2.set_collision_mask_value(i,false)
+	player_1.set_collision_layer_value(1,true)
+	player_2.set_collision_layer_value(2,true)
 	set_process(true)
 
 func _process(delta: float) -> void:

@@ -107,7 +107,7 @@ func update_animation(input_axis):
 		elif(playerIcon1.frame == 1):
 			animated_sprite_2d.play("SRun")
 		
-		# Off set bug fix
+		# Offset bug fix
 		if(animated_sprite_2d.flip_h == false):
 			animated_sprite_2d.offset.x = 0
 		elif(animated_sprite_2d.flip_h == true):
@@ -118,7 +118,7 @@ func update_animation(input_axis):
 		elif(playerIcon1.frame == 1):
 			animated_sprite_2d.play("SIdle")
 		
-		# Off set bug fix
+		# Offset bug fix
 		if(animated_sprite_2d.flip_h == false):
 			animated_sprite_2d.offset.x = 3
 		elif(animated_sprite_2d.flip_h == true):
@@ -137,18 +137,21 @@ func update_animation(input_axis):
 			if(animated_sprite_2d.flip_h == true):
 				animated_sprite_2d.offset.x = 3
 		
-		# Off set bug fix
+		# Offset bug fix
 		if(animated_sprite_2d.flip_h == false && is_on_floor()):
 			animated_sprite_2d.offset.x = 3
 		elif(animated_sprite_2d.flip_h == true && is_on_floor()):
 			animated_sprite_2d.offset.x = 0
 func handleAttack1(delta):
+	
 	timer += delta
 	if(timer >= 0.18):
 		attacking = false
 		attacked1 = false
 		timer = 0
 		
+	
+	
 	# Plays the animation
 	animated_sprite_2d.play("GSmack")
 	if(animated_sprite_2d.flip_h == false):

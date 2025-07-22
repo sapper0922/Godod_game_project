@@ -394,6 +394,7 @@ offset_top = 10.0
 offset_right = 50.0
 offset_bottom = 50.0
 scale = Vector2(3, 2)
+color = Color(0, 0.231373, 0, 1)
 
 [node name="Button" type="Button" parent="GoButton/Panel1"]
 layout_mode = 0
@@ -416,6 +417,7 @@ offset_top = 10.0
 offset_right = 50.0
 offset_bottom = 50.0
 scale = Vector2(3, 2)
+color = Color(1, 0.392157, 0.392157, 1)
 
 [node name="Button" type="Button" parent="GoButton/Panel2"]
 layout_mode = 0
